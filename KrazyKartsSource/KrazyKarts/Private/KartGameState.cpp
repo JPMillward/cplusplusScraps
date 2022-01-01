@@ -33,6 +33,11 @@ bool AKartGameState::IsRaceActive() const
 	return bIsRaceActive;
 }
 
+void AKartGameState::SetRaceActive(bool bIsActive)
+{
+	bIsRaceActive = bIsActive;
+}
+
 void AKartGameState::GetLifetimeReplicatedProps( TArray< FLifetimeProperty > & OutLifetimeProps ) const
 {
 	Super::GetLifetimeReplicatedProps( OutLifetimeProps );

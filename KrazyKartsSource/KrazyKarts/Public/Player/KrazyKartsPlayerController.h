@@ -13,5 +13,9 @@ UCLASS()
 class KRAZYKARTS_API AKrazyKartsPlayerController : public APlayerController
 {
 	GENERATED_BODY()
-	
+
+public:
+	void UpdatePlayerState(bool bIsEnabled);
+
+private:
 };

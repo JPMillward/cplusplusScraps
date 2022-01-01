@@ -16,7 +16,22 @@ class KRAZYKARTS_API AKartGameState : public AGameStateBase
 
 	AKartGameState(const FObjectInitializer& ObjectInitializer);
 
+public:
 
+	UFUNCTION(BlueprintCallable, Category = Game)
+	float GetTotalTime();
+
+	UFUNCTION(BlueprintCallable, Category = Game)
+	bool IsRaceActive() const;
+
+	UFUNCTION(BlueprintCallable, Category = Game)
+	void SetRaceActive(bool bIsActive);
+
+
+protected:
+
+
+private:
 	/** number of teams in current game */
 	UPROPERTY(Transient, Replicated)
 	uint32 PlayerCount;
@@ -32,11 +47,5 @@ class KRAZYKARTS_API AKartGameState : public AGameStateBase
 	/** is timer paused? */
 	UPROPERTY(Transient, Replicated)
 	bool bIsRaceActive;
-
-	UFUNCTION(BlueprintCallable, Category = Game)
-	float GetTotalTime();
-
-	UFUNCTION(BlueprintCallable, Category = Game)
-	bool IsRaceActive() const;
 
 };

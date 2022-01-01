@@ -57,7 +57,7 @@ public:
 
 	FGoKartMove GetLastMove() {	return LastMove; };
 
-	void SetBrakeLock();
+	void SetBrakeLock(bool bIsLocked);
 
 
 protected:

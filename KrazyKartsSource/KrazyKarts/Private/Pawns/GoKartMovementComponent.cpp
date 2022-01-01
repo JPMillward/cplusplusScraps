@@ -61,6 +61,11 @@ void UGoKartMovementComponent::SimulateMove(const FGoKartMove& Move)
 	return;
 }
 
+void UGoKartMovementComponent::SetBrakeLock(bool bIsLocked)
+{
+	GetOwner()->InputComponent->bBlockInput = bIsLocked;
+}
+
 void UGoKartMovementComponent::SetVelocity(FVector NewVelocity)
 {
 	Velocity = NewVelocity;

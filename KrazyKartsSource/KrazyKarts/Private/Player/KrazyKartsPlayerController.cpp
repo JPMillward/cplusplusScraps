@@ -3,3 +3,15 @@
 
 #include "Player/KrazyKartsPlayerController.h"
 
+void AKrazyKartsPlayerController::UpdatePlayerState(bool bIsEnabled)
+{
+	if (bIsEnabled)
+	{
+		GetPawn()->EnableInput(this);
+	}
+
+	if (!bIsEnabled)
+	{
+		GetPawn()->DisableInput(this);
+	}
+}
